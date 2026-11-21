@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição — IMPPQ</title>
+    <link rel="stylesheet" href="materiais/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body class="cadastre">
+
+   <header class="cabecalho-partilhado">
+    <a href="Home.html" class="marca" aria-label="Página inicial do I.M.P.P.Q.">
+        <img src="img/logo.png" alt="Logótipo do I.M.P.P.Q.">
+        <div class="marca-texto">
+            <h2>I.M.P.P.Q.</h2>
+            <p>Excelência · Dedicação · Inovação</p>
+        </div>
+    </a>
+
+    <nav class="navegacao" aria-label="Navegação principal">
+        <a href="Home.php">Início</a>
+        <a href="consultas.html">Consultas</a>
+        <a href="confirmacao.html">Confirmação</a>
+        <a href="https://wa.me/942252523">Contacto</a>
+        
+    </nav>
+     
+
+</header>
+ <div class="cabecalho-inscricao" style="display:flex; justify-content: center; padding:1.5rem; gap:3px; margin-bottom: 2px; flex-direction: column; align-items:center; width:100%; height: fit-content;">
+        
+        <h2>Faça parte da nossa escola e construa o seu futuro!</h2>
+        <p>Preencha os dados abaixo para realizar a sua inscrição</p>
+</div>
+    <form action="../connect/processar.php" method="POST" enctype="multipart/form-data" id="form">
+
+        <article>
+            
+          <div>
+            <h2><i class="fa-solid fa-user" style="background:var(--footer); padding:10px; border-radius:15px; color:white;"></i> &nbsp;Dados do Aluno</h2>
+            <p>Informações pessoais e academicas</p>
+          </div>  
+        </article>
+        
+        <label for="nome_completo" class="label-nome">Nome completo:</label>
+        <input type="text" id="nome_completo" name="nome_completo" placeholder="Nome completo" autocomplete="name" required>
+        <article class="coluna">
+            <label for="telefone">telefone<br>
+                <input type="tel" id="telefone" name="telefone" autocomplete="tel" placeholder="Ex: 923 000 000" pattern="[0-9 ]{9,12}" minlength="9" maxlength="12" required>
+            </label>
+            
+        
+        <label for="numero_bi">Numero do BI:<br>
+            <input type="text" id="numero_bi" maxlength="14" minlength="14" placeholder="Ex.: 000123456LA041" name="nUmero_BI" autocomplete="off" required>
+        </label>
+         <label for="morada">Morada:<br>
+            <input type="text" value="" name="morada" placeholder="morada" required id="morada">
+        </label>
+        
+        <label for="data_nascimento">Data de nascimento:<br>
+            <input type="date" name="data_nascimento" id="data_nascimento" placeholder="Data de nascimento" required>
+        </label>
+        
+        <label for="curso">Curso:<br>
+            <select name="curso" id="curso" required>
+            <option value="">escolha</option>
+            <option value="Tecnico de Informática">Tecnico de Informatica</option>
+            <option value="Gestão de Sistemas Informaticos">Gestão de Sistemas Informaticos</option>
+            <option value="Informatica de Gestão">Informatica
+         de Gestão</option>
+         <option value="Contabilidade">Contabilidade</option>
+         <option value="Gestão empresarial">Gest_empresarial</option>
+         <option value="Recursos Humanos">Recursos Humanos</option>
+        </select>
+        
+        </label>
+        <label for="sexo">Sexo:<br>
+            <select name="sexo" id="sexo" required>
+            <option value="">escolha</option>
+            <option value="M">Masculino</option>
+            <option value="F">Femenino</option>
+            <option value="Outro">A definir</option>
+        </select>
+        
+        </label>
+        <label for="classe">Classe:<br>
+            <select name="classe" id="classe" required>
+            <option value="">Escolha</option>
+            <option value="10">10ª</option>
+            <option value="11">11ª</option>
+            <option value="12">12ª</option>
+            <option value="13">13ª</option>
+        </select>
+        
+        </label>
+        </article>
+         <label for="foto">
+            <i class="fa fa-file" style="font-size:14px; padding:2px;"></i>
+            <p>Clique para enviar a fotografia</p>
+            <input type="file" name="numero_foto" accept=".jpg,.jpeg,.png" required hidden id="foto">
+        </label><br> 
+        <article class="form_btn">
+            <button type="submit"> Finalizar inscrição</button>
+        </article>
+    </form><br>
+      <footer class="site-footer">
+  <div class="foot_container">
+    <section class="footer_child1">
+      <h2>IMPPQ</h2>
+      <ul class="menu1">
+        <li>EXCELÊNCIA</li>
+        <li class="ter">DEDICAÇÃO</li>
+        <li class="ter">INOVAÇÃO</li>
+      </ul>
+      <p>Formando o futuro com Excelência,<br>dedicação e Inovação</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://wa.me/942252523" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+      </div>
+    </section>
+    <section class="footer_child2">
+      <h3>Links rápidos</h3>
+      <ul>
+        <li><a href="Home.php#inicio">Início</a></li>
+        <li><a href="Home.php#escola">A escola</a></li>
+        <li><a href="Home.php#cursos">Cursos</a></li>
+        <li><a href="Home.php#recursos">Benefícios</a></li>
+        <li><a href="consultas.php">Consultas</a></li>
+        <li><a href="https://wa.me/942252523">Contacto</a></li>
+      </ul>
+    </section>
+    <section class="footer_child3">
+      <h3>Contacto</h3>
+      <ul>
+        <li><span>9xx xxx xxx</span></li>
+        <li><span>example@.com</span></li>
+        <li><span>cacuaco, shalina</span></li>
+      </ul>
+    </section>
+    <section class="footer_4">
+      <h3>Horário de atendimento</h3>
+      <p>Segunda–Sexta: 7h30–17h00</p>
+      <p>Sábado: 8h00–11h00</p>
+    </section>
+  </div>
+  <p class="slr">© 2026 IMPPQ — Todos os direitos reservados</p>
+</footer>
+
+    <script src="../script/script.js"></script>
+</body>
+</html>

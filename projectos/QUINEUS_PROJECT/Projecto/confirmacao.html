@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Confirmação de Matrícula | I.M.P.P.Q.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="materiais/estilos.css">
+</head>
+<body>
+
+    <div id="confirmacao">
+
+        <header class="cabecalho-partilhado">
+    <a href="Home.php" class="marca" aria-label="Página inicial do I.M.P.P.Q.">
+        <img src="img/logo.png" alt="Logótipo do I.M.P.P.Q.">
+        <div class="marca-texto">
+            <h2>I.M.P.P.Q.</h2>
+            <p>Excelência · Dedicação · Inovação</p>
+        </div>
+    </a>
+
+    <nav class="navegacao" aria-label="Navegação principal">
+        <a href="Home.html">Início</a>
+        <a href="consultas.html">Consultas</a>
+        <a href="confirmacao.html">Confirmação</a>
+        <a href="https://wa.me/942252523">Contacto</a>
+        <a href="cadastre.html">Inscreva-se</a>
+    </nav>
+</header>
+
+        <!-- Conteúdo principal -->
+        <main class="principal">
+
+            <!-- Navegação -->
+            <div class="caminho">
+                <a href="Home.html">Início</a>
+                <span>/</span>
+                <span>Confirmação de matrícula</span>
+            </div>
+
+            <!-- Introdução -->
+            <section class="introducao">
+
+                <div class="icone-principal">
+                    <span>🎓</span>
+                </div>
+
+                <h1>Confirmação de Matrícula</h1>
+
+                <p>
+                    Confirme os seus dados e indique a classe e o ano
+                    lectivo em que pretende continuar os seus estudos.
+                </p>
+
+            </section>
+
+            <!-- Formulário de confirmação -->
+            <section class="cartao">
+
+                <form action="#" method="post">
+
+                    <!-- Dados do aluno -->
+                    <div class="titulo-seccao">
+
+                        <span class="icone-seccao">👤</span>
+
+                        <div>
+                            <h2>Dados do aluno</h2>
+                            <p>Consulte os seus dados registados.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="campo">
+                        <label for="nome">Nome completo</label>
+
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            value=""
+                            placeholder="Nome Completo"
+                        
+                        >
+                    </div>
+
+                    <div class="campos-duplos">
+
+                        <div class="campo">
+                            <label for="curso">Curso actual</label>
+
+                            <input
+                                type="text"
+                                id="curso"
+                                name="curso"
+                                value=""
+                                placeholder="curso atual"
+                        
+                            >
+                        </div>
+
+                        <div class="campo">
+                            <label for="classe_atual">Classe actual</label>
+
+                            <input
+                                type="text"
+                                id="classe_atual"
+                                name="classe"
+                                value="10.ª classe"
+                            
+                            >
+                        </div>
+
+                    </div>
+
+                    <div class="separador"></div>
+
+                    <!-- Dados da confirmação -->
+                    <div class="titulo-seccao">
+
+                        <span class="icone-seccao">📅</span>
+
+                        <div>
+                            <h2>Dados da confirmação</h2>
+                            <p>
+                                Indique como pretende continuar os seus estudos.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- Ano lectivo -->
+                    <div class="campo">
+                        <label for="ano_lectivo">
+                            Ano lectivo pretendido
+                        </label>
+
+                        <select
+                            id="ano_lectivo"
+                            name="ano_lectivo"
+                            required
+                        >
+                            <option value="">
+                                Seleccione o ano lectivo
+                            </option>
+
+                            <option value="2027/2028">
+                                2027/2028
+                            </option>
+
+                            <option value="2028/2029">
+                                2028/2029
+                            </option>
+                        </select>
+                    </div>
+
+                    <!-- Classe pretendida -->
+                    <div class="campo">
+                        <label for="classe_pretendida">
+                            Classe a frequentar
+                        </label>
+
+                        <select
+                            id="classe_pretendida"
+                            name="classe_pretendida"
+                            required
+                        >
+                            <option value="">
+                                Seleccione a classe
+                            </option>
+
+                            <option value="10.ª classe">
+                                10.ª classe
+                            </option>
+
+                            <option value="11.ª classe">
+                                11.ª classe
+                            </option>
+
+                            <option value="12.ª classe">
+                                12.ª classe
+                            </option>
+
+                            <option value="13.ª classe">
+                                13.ª classe
+                            </option>
+                        </select>
+                    </div>
+
+                    <!-- Aviso -->
+                    <div class="aviso">
+
+                        <span class="aviso-icone">ⓘ</span>
+
+                        <div>
+                            <h3>Verifique antes de confirmar</h3>
+
+                            <p>
+                                Certifique-se de que seleccionou o ano
+                                lectivo e a classe correctos, de acordo
+                                com a sua progressão escolar.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- Botão -->
+                    <button
+                        type="submit"
+                        class="botao-confirmar"
+                    >
+                        Confirmar matrícula
+                    </button>
+
+                    <p class="nota">
+                        A sua confirmação será submetida para registo.
+                    </p>
+
+                </form>
+
+            </section>
+
+            <!-- Segurança -->
+            <div class="seguranca">
+                <span>✓</span>
+
+                <p>
+                    Os seus dados devem ser tratados com segurança.
+                </p>
+            </div>
+
+        </main>
+
+        <!-- Rodapé -->
+        <footer class="site-footer">
+  <div class="foot_container">
+    <section class="footer_child1">
+      <h2>IMPPQ</h2>
+      <ul class="menu1">
+        <li>EXCELÊNCIA</li>
+        <li class="ter">DEDICAÇÃO</li>
+        <li class="ter">INOVAÇÃO</li>
+      </ul>
+      <p>Formando o futuro com Excelência,<br>dedicação e Inovação</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://wa.me/942252523" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+      </div>
+    </section>
+    <section class="footer_child2">
+      <h3>Links rápidos</h3>
+      <ul>
+        <li><a href="Home.php#inicio">Início</a></li>
+        <li><a href="Home.php#escola">A escola</a></li>
+        <li><a href="Home.php#cursos">Cursos</a></li>
+        <li><a href="Home.php#recursos">Benefícios</a></li>
+        <li><a href="consultas.php">Consultas</a></li>
+        <li><a href="https://wa.me/942252523">Contacto</a></li>
+      </ul>
+    </section>
+    <section class="footer_child3">
+      <h3>Contacto</h3>
+      <ul>
+        <li><span>9xx xxx xxx</span></li>
+        <li><span>example@.com</span></li>
+        <li><span>cacuaco, shalina</span></li>
+      </ul>
+    </section>
+    <section class="footer_4">
+      <h3>Horário de atendimento</h3>
+      <p>Segunda–Sexta: 7h30–17h00</p>
+      <p>Sábado: 8h00–11h00</p>
+    </section>
+  </div>
+  <p class="slr">© 2026 IMPPQ — Todos os direitos reservados</p>
+</footer>
+
+
+    </div>
+
+</body>
+</html>
