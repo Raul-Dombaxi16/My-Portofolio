@@ -1,1 +1,7 @@
-// O portfólio não precisa de JavaScript adicional neste momento.
+let h=document.querySelectorAll(`.date-portofolio`);
+
+h.forEach(function(a){
+ a.textContent= new Date().getFullYear();
+
+
+})
