@@ -47,14 +47,14 @@ Mais do que aprender linguagens de programação, procuro compreender como as te
 
 Alguns projetos que representam a minha evolução e experiência prática:
 
-| Projeto | Descrição | Tecnologias |
-|---|---|---|
 | **DeepNet Fibra** | Landing page para apresentação e divulgação de serviços de internet. | HTML, CSS, JavaScript |
-| **IMPGQ / ITEL** | Website institucional para apresentação de uma instituição de ensino, cursos e serviços. | HTML, CSS, JavaScript |
+| **IMPGQ ** | Website institucional para apresentação de uma instituição de ensino, cursos e serviços. | HTML, CSS, JavaScript |
 | **Cafetária Horizonte** | Website comercial para apresentação de produtos, serviços e identidade da empresa. | HTML, CSS, JavaScript |
 | **Calculadora Web** | Aplicação para praticar lógica, operações matemáticas e manipulação do DOM. | HTML, CSS, JavaScript |
 | **Conversor de Idade** | Aplicação interativa com formulários e processamento de dados. | HTML, CSS, JavaScript |
 | **Apple Clone** | Reprodução de interface para desenvolver competências de design e desenvolvimento Front-end. | HTML, CSS, JavaScript |
+
+| **Controlador do tempo** | Criado para desenvolver habilidade com o DOM e algoritimos.
 
 ---
 

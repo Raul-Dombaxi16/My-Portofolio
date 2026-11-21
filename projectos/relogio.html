@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio Digital</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #101827;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.relogio-container {
+    width: 90%;
+    max-width: 500px;
+    padding: 35px 25px;
+    background: #172337;
+    border: 1px solid #293950;
+    border-radius: 18px;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+
+}
+
+header h1 {
+    font-size: 28px;
+    letter-spacing: 4px;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #94a3b8;
+    margin-bottom: 35px;
+}
+
+.relogio {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.tempo {
+    flex: 1;
+    padding: 20px 8px;
+    background: #26364c;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.tempo span {
+    font-size: clamp(28px, 8vw, 48px);
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+.tempo small {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #cbd5e1;
+}
+
+.controler{
+    display: flex;
+    justify-content: center;
+    color:white;
+    font-size:11px;
+    padding:1em;
+    gap:0.5em;
+}
+.controler button{
+    padding:0.5em;
+    border:none;
+    border-radius:0.9em;
+
+}
+.controler button:nth-child(1){background:rgb(67, 218, 130);}
+.controler button:nth-child(2){background:rgb(214, 79, 79);}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    margin-top: 30px;
+    font-size: 11px;
+    color: #86efac;
+}
+
+.indicador {
+    width: 8px;
+    height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+}
+
+@media (max-width: 380px) {
+    .relogio-container {
+        padding: 25px 12px;
+    }
+
+    .relogio {
+        gap: 7px;
+    }
+
+    .tempo {
+        padding: 15px 4px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <main class="relogio-container">
+
+        <header>
+            <h1>Time Clock</h1>
+            <p>Clique em start para iniciar. <br>O tempo não para</p>
+            
+        </header>
+
+        <section class="relogio">
+
+            <div class="tempo">
+                <span id="horas">00</span>
+                <small>HORAS</small>
+            </div>
+
+            <div class="tempo">
+                <span id="minutos">00</span>
+                <small>MINUTOS</small>
+            </div>
+
+            <div class="tempo">
+                <span id="segundos">00</span>
+                <small>SEGUNDOS</small>
+            </div>
+
+            
+        </section>
+        <div class="controler">
+                <button>Start</button>
+                <button>Reset</button>
+            </div>
+
+
+        <footer>
+            <span class="indicador"></span>
+            <p>RELÓGIO PRONTO</p>
+        </footer>
+
+    </main>
+
+    <script>
+    
+    
+let btn = document.querySelectorAll("button");
+
+let intervalo;
+
+let controle=true;
+
+function atualizarRelogio() {
+
+    let titulo = document.querySelector("header > p");
+    let hours = document.querySelector("#horas");
+    let min = document.querySelector("#minutos");
+    let seg = document.querySelector("#segundos");
+
+    const data = new Date();
+
+    let h = data.getHours();
+    let m = data.getMinutes();
+    let s = data.getSeconds();
+
+    // Adicionar zero à esquerda
+    if (h < 10) h = "0" + h;
+    if (m < 10) m = "0" + m;
+    if (s < 10) s = "0" + s;
+
+    hours.textContent = h;
+    min.textContent = m;
+    seg.textContent = s;
+
+}
+
+
+btn[0].addEventListener("click", function() {
+
+    if (controle !== true) {
+        return;
+    }
+
+    atualizarRelogio();
+
+    intervalo = setInterval(atualizarRelogio, 1000);
+
+    document.querySelector("header > p").textContent = "Relógio iniciado!";
+
+});
+
+
+btn[1].addEventListener("click", function() {
+
+    clearInterval(intervalo);
+
+    controle = false;
+
+    document.querySelector("#horas").textContent = "00";
+    document.querySelector("#minutos").textContent = "00";
+    document.querySelector("#segundos").textContent = "00";
+
+    document.querySelector("header > p").textContent = "Relógio reiniciado!";
+
+    controle=true
+
+
+});
+
+</script>
+
+</body>
+</html>
